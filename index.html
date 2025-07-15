@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Jeshua Romero Guadarrama" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casa de Café</title>
+
+    <!-- Hojas de estilo y tipografías -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:wght@300;400;700&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  </head>
+
+  <body>
+    <!-- Comentario: Botón flotante para alternar tema oscuro/claro -->
+    <button id="toggle-tema" class="tema-btn" aria-label="Cambiar tema">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+      <!-- Navegación -->
+      <nav class="navbar">
+        <div class="logo">
+          <i class="fa-solid fa-mug-saucer"></i>
+          <div class="logo-text">
+            <span>Café</span>
+            <span>House</span>
+          </div>
+        </div>
+        <div class="navigation">
+          <a href="#">Inicio</a>
+          <a href="#">Menú</a>
+          <a href="#">Blog</a>
+          <a href="#">Acerca</a>
+          <a href="#">Tienda</a>
+          <a href="#">Contacto</a>
+          <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+      </nav>
+
+      <!-- Portada con carrusel y datos de contacto -->
+      <section class="landing">
+        <div class="banner">
+          <h3 class="main-heading">Bienvenidos</h3>
+          <h1>Sabor increíble &amp; lugar hermoso</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <button class="banner-btn banner-btn-1">Ordenar ahora</button>
+          <button class="banner-btn banner-btn-2">Ver menú</button>
+        </div>
+
+        <!-- Carrusel Swiper -->
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <!-- Clase lazy para script de carga perezosa -->
+              <img class="lazy" data-src="images/image1.jpg" alt="Ambiente 1" />
+            </div>
+            <div class="swiper-slide">
+              <img class="lazy" data-src="images/image2.jpg" alt="Ambiente 2" />
+            </div>
+            <div class="swiper-slide">
+              <img class="lazy" data-src="images/image3.jpg" alt="Ambiente 3" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="landing-contact">
+          <div class="details">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <span>000 (123) 456 7890</span>
+              <span>Atención de 8 a 20 h</span>
+            </div>
+          </div>
+          <div class="details">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <span>Calle Principal 123</span>
+              <span>Ciudad de México, MX</span>
+            </div>
+          </div>
+          <div class="details">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <span>Horario laboral</span>
+              <span>L‑V · 8:00‑21:00</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Servicios -->
+      <section class="about">
+        <div>
+          <i class="fa-solid fa-mobile"></i>
+          <h1>Fácil de pedir</h1>
+          <p>Haz tu pedido desde cualquier dispositivo en segundos.</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-truck"></i>
+          <h1>Entrega exprés</h1>
+          <p>Recibe tu café caliente en menos de 20 minutos.</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-mug-hot"></i>
+          <h1>Café premium</h1>
+          <p>Seleccionamos granos arábica de comercio justo.</p>
+        </div>
+      </section>
+
+      <!-- Menú dinámico -->
+      <section class="menu" id="menu">
+        <div class="menu-left">
+          <h3 class="main-heading">Descubre</h3>
+          <h1>Nuestro Menú</h1>
+          <p>Conoce nuestras bebidas y repostería recién horneada.</p>
+          <button class="menu-btn">Ver menú completo</button>
+        </div>
+        <div class="menu-right">
+          <div class="menu-right-images">
+            <div class="menu-img-wrapper">
+              <img class="lazy" data-src="images/image4.jpg" alt="Detalle café" />
+            </div>
+            <div class="menu-img-wrapper">
+              <img class="lazy" data-src="images/image5.jpg" alt="Latte art" />
+            </div>
+            <div class="menu-img-wrapper">
+              <img class="lazy" data-src="images/image6.jpg" alt="Postres" />
+            </div>
+            <div class="menu-img-wrapper">
+              <img class="lazy" data-src="images/image7.jpg" alt="Granos selectos" />
+            </div>
+          </div>
+        </div>
+        <!-- Contenedor donde menu.js inyectará las tarjetas -->
+        <div id="menu-dinamico" class="menu-dinamico"></div>
+      </section>
+
+      <!-- Datos con animación de conteo -->
+      <section class="data">
+        <div>
+          <div class="icon-wrapper"><i class="fa-solid fa-mug-hot"></i><span class="icon-bg"></span></div>
+          <span class="num" data-val="350">0</span>
+          <span class="info">Sucursales</span>
+        </div>
+        <div>
+          <div class="icon-wrapper"><span class="icon-bg"></span><i class="fa-solid fa-trophy"></i></div>
+          <span class="num" data-val="90">0</span>
+          <span class="info">Premios</span>
+        </div>
+        <div>
+          <div class="icon-wrapper"><span class="icon-bg"></span><i class="fa-solid fa-users"></i></div>
+          <span class="num" data-val="2540">0</span>
+          <span class="info">Clientes felices</span>
+        </div>
+        <div>
+          <div class="icon-wrapper"><span class="icon-bg"></span><i class="fa-solid fa-user-tie"></i></div>
+          <span class="num" data-val="750">0</span>
+          <span class="info">Colaboradores</span>
+        </div>
+      </section>
+
+      <!-- Testimonios -->
+      <section class="customers"> … </section>
+
+      <!-- Formulario de reserva -->
+      <section class="contact">
+        <div class="contact-left"></div>
+        <div class="contact-right">
+          <form id="form-reserva">
+            <h1>Reservar una mesa</h1>
+            …
+          </form>
+        </div>
+      </section>
+
+      <!-- Carrito de compras -->
+      <aside class="carrito-resumen">
+        <h2><i class="fa-solid fa-cart-shopping"></i> Mi carrito</h2>
+        <ul id="carrito"></ul>
+        <p>Total: <span id="total-carrito">$0</span></p>
+      </aside>
+
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+      <p class="copyright">&copy; 2024 Todos los derechos reservados. Creado por Jeshua Romero Guadarrama</p>
+    </footer>
+
+    <!-- Librería Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Script principal como módulo ES6 -->
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
