@@ -62,7 +62,9 @@ Incluye **carrusel**, **menú dinámico**, **carrito persistente**, **contador a
 raíz/
 │
 ├─ index.html
-├─ style.css
+│
+├─ css/
+│  └─ style.css
 │
 ├─ js/
 │   ├─ datos.js          # Datos de menú y estado inicial de carrito
